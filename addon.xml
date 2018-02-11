@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.hello.world" name="Hello World" version="1.0.1" provider-name="zag">
+<addon id="plugin.video.testpirate" version="1.0.0" name="TestPirate" provider-name="Test Pirate">
 	<requires>
-		<import addon="xbmc.python" version="2.14.0"/>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="repository.colossus" />
+		<import addon="script.module.covenant" />
+		<import addon="script.covenant.artwork" version="1.0.0" />
+		<import addon="script.covenant.metadata" version="1.0.0" />
+		<import addon="script.module.urlresolver" version="3.0.0" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" version="1.0.0" />
 	</requires>
-	<extension point="xbmc.python.script" library="addon.py">
-		<provides>executable</provides>
+	<extension point="xbmc.python.pluginsource" library="covenant.py">
+		<provides>video</provides>
 	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
+		<summary lang="en">TESTE PIRATE</summary>
+		<description lang="en">TESTE PIRATE.</description>
+		<description lang="hr">TESTE PIRATE</description>
+		<description lang="he">TESTE PIRATE</description>
 		<platform>all</platform>
-		<summary lang="en">Popup Hello World</summary>
-		<description lang="en">Example Script to show hello world</description>
-		<license>GNU General Public License, v2</license>
-		<language></language>
-		<forum>http://forum.kodi.tv/showthread.php?tid=209948</forum>
-		<source>https://github.com/rafaelbaiolim/kodi.hello.world</source>
-		<website>Kodi.tv</website>
-		<email>zag@kodi.org</email>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum></forum>
+		<website></website>
+		<source></source>
+		<disclaimer lang="en">AUTOR</disclaimer>
+		<disclaimer lang="hr">AUTOR</disclaimer>
+		<disclaimer lang="he">AUTOR</disclaimer>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
-			<screenshot>resources/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshot-03.jpg</screenshot>
+    			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+    			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+    			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
-		<news>Updated the addon to use new addon.xml metadata</news>
+		<news></news>
 	</extension>
 </addon>
